@@ -8,22 +8,22 @@ import { User } from './entities/user.entity';
 export class UsersService {
   constructor(
     @InjectModel(User)
-    private userRepository: typeof User,
+    private userModel: typeof User,
   ) { }
 
   async create(registerUserDto: RegisterUserDto) {
-    return this.userRepository.create(registerUserDto as any);
+    return await this.userModel.create(registerUserDto as any);
   }
 
   async findOneById(id: number) {
-    return this.userRepository.findOne({ where: { id: id } });
+    return await this.userModel.findOne({ where: { id: id } });
   }
 
-  async findOneByUsername(username: string) {
-    return this.userRepository.findOne({ where: { username: username } });
+  async findOneByEmail(email: string) {
+    return await this.userModel.findOne({ where: { email: email } });
   }
 
   async remove(id: number) {
-    return this.userRepository.destroy({ where: { id: id } });
+    return await this.userModel.destroy({ where: { id: id } });
   }
 }
