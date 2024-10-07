@@ -32,6 +32,15 @@ This projects build using NestJS (with Typescript) and PostgreSQL.
 
 Notes: Detail of example APIs responses and requests available at the Postman API Documentation Link [above](https://www.postman.com/payload-meteorologist-85676392/workspace/api-beever-nestjs).
 
+<div align="center">
+  <img width="250" alt="Screen Shot 2024-10-07 at 22 13 39" src="https://github.com/user-attachments/assets/1202fdcf-f0b7-43f7-b3ad-142993d2912d">
+</div>
+
+<br />
+
+I put example responses of every endpoints to make the request paramaters and example responses of every cases of the API more clear. For API that has _[Protected]_ prefix, it needs Authorization header with Bearer token. Simply use API `Authentication > Login` first, I already made the script on login part to save the token after logged in and it will be automatically used as Bearer token on all protected routes on Postman.
+
+
 ## Code Structure
 
 - `src`
