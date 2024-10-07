@@ -24,13 +24,13 @@ This projects build using NestJS (with Typescript) and PostgreSQL.
 
 ## Documentation
 
-- [Postman API Documentation]([[https://www.postman.com/nrmld/workspace/hyperhire-distributed-llm-assignment-noor-maulida/folder/158398-4feb623d-453c-46ca-91fd-0fd24d57f697?action=share&source=copy-link&creator=158398&ctx=documentation](https://www.postman.com/payload-meteorologist-85676392/workspace/api-beever-nestjs)](https://www.postman.com/payload-meteorologist-85676392/workspace/api-beever-nestjs))
+- [Postman API Documentation](https://www.postman.com/payload-meteorologist-85676392/workspace/api-beever-nestjs)
 - API Routes:
   - POST /api/v1/auth/register
   - POST /api/v1/auth/login
   - GET /api/v1/quotes (protected routes, need authentication)
 
-Notes: Detail of example APIs responses and requests available at the Postman API Documentation Link above.
+Notes: Detail of example APIs responses and requests available at the Postman API Documentation Link [above](https://www.postman.com/payload-meteorologist-85676392/workspace/api-beever-nestjs).
 
 ## Code Structure
 
