@@ -1,4 +1,4 @@
-import { IsNotEmpty, MinLength, IsEmail, IsEnum } from 'class-validator';
+import { IsNotEmpty, MinLength, IsEmail, Matches, IsStrongPassword } from 'class-validator';
 
 export class RegisterUserDto {
     @IsNotEmpty()
@@ -9,6 +9,11 @@ export class RegisterUserDto {
     readonly email: string;
 
     @IsNotEmpty()
-    @MinLength(8)
+    @IsStrongPassword({
+        minLowercase: 1,
+        minNumbers: 1,
+        minSymbols: 1,
+        minUppercase: 1
+    }, { message: 'your password must contain at least one number and have a mixture of uppercase and lowercase letters' })
     readonly password: string;
 }
