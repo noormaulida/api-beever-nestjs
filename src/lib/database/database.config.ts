@@ -1,5 +1,6 @@
 import { SequelizeModuleOptions } from '@nestjs/sequelize';
 import pg from 'pg';
+import { User } from 'src/users/entities/user.entity';
 
 export const dataBaseConfig: SequelizeModuleOptions = {
   dialect: 'postgres',
@@ -9,6 +10,7 @@ export const dataBaseConfig: SequelizeModuleOptions = {
   username: 'dbmasteruser',
   password: 'testobnb1234567890',
   database: 'noormaulida',
+  synchronize: true,
   autoLoadModels: true,
-  synchronize: false,
+  models: [User],
 };

@@ -1,4 +1,5 @@
 import { Column, Table, Model, DataType } from 'sequelize-typescript';
+import { Exclude } from 'class-transformer';
 
 @Table({
     tableName: 'users',
@@ -17,7 +18,8 @@ export class User extends Model {
     email: string;
     @Column({
         type: DataType.STRING,
-        allowNull: false,
+        allowNull: false
     })
+    @Exclude()
     password: string;
 }
